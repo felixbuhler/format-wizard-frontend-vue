@@ -1,5 +1,3 @@
-
-
 <template>
     <div class='entry-content'>
         <div class='column'>
@@ -95,7 +93,9 @@
                 <!-- Audio Codec  -->
                 <div class='info' v-if="entryAudioCodec">
                     <h6>Audio Codec</h6>
-                    <p>{{ entryAudioCodec }}</p>
+                    <p>
+                        <SanityBlocks :blocks=entryAudioCodec />
+                    </p>
                 </div>
 
                 <!-- Color Space  -->
@@ -132,7 +132,11 @@
 
 <script>
 
+
+
 export default {
+
+
     props: [
         'entryName',
         'entryWidth', 'entryHeight',
@@ -166,14 +170,17 @@ export default {
     --safezonetop: v-bind(entrySafeZoneTop);
     top: calc(var(--unit) * var(--safezonetop));
 }
+
 .safe-space-bottom {
     --safezonebottom: v-bind(entrySafeZoneBottom);
     bottom: calc(var(--unit) * var(--safezonebottom));
 }
+
 .safe-space-left {
     --safezoneleft: v-bind(entrySafeZoneLeft);
     left: calc(var(--unit) * var(--safezoneleft));
 }
+
 .safe-space-right {
     --safezoneright: v-bind(entrySafeZoneRight);
     right: calc(var(--unit) * var(--safezoneright));

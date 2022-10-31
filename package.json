@@ -8,6 +8,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@portabletext/to-html": "^1.0.4",
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
     "sanity-blocks-vue-component": "^1.0.1",

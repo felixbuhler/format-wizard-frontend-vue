@@ -6,7 +6,7 @@ import Article from './Article.vue';
 
 import sanity from "../client";
 
-const query = `*[_type == "printOther"]{
+const query = `*[_type == "printOther"] | order(order asc) {
   _id,
   name,
   widthMm, heightMm, widthPx, heightPx, useCases, exampleProjects, aspectRatio, minSizePixel, recSizePixel, maxDuration, minDuration, framesPerSecond, maxFileSize, videoCodec,

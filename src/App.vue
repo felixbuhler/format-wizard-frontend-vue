@@ -3,6 +3,7 @@ import Intro from "./components/Intro.vue";
 import Header from "./components/Header.vue";
 import TheContent from "./components/TheContent.vue";
 import Footer from "./components/Footer.vue";
+import Error from "./components/Error.vue";
 </script>
 
 <template>
@@ -10,4 +11,5 @@ import Footer from "./components/Footer.vue";
   <Intro />
   <TheContent />
   <Footer />
+  <Error />
 </template>

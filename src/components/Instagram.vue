@@ -6,7 +6,7 @@ import Article from './ArticleDigital.vue';
 
 import sanity from "../client";
 
-const query = `*[_type == "digitalInstagram"]{
+const query = `*[_type == "digitalInstagram"] | order(order asc) {
   _id,
   name,
   widthMm, heightMm, widthPx, heightPx, useCases, exampleProjects, aspectRatio, minSizePixel, recSizePixel, maxDuration, minDuration, framesPerSecond, maxFileSize, videoCodec,

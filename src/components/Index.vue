@@ -1,4 +1,5 @@
 <script setup>
+import IndexInstagram from './IndexInstagram.vue';
 import IndexPrintDin from './IndexPrintDin.vue';
 import IndexPrintOther from './IndexPrintOther.vue';
 </script>
@@ -18,7 +19,8 @@ import IndexPrintOther from './IndexPrintOther.vue';
     <section class="index-digital">
         <h3>Digital</h3>
         <section>
-            <h4>Instagram</h4>
+            <h4><a href="#instagram">Instagram</a></h4>
+            <IndexInstagram />
         </section>
         <section>
             <h4>TikTok</h4>

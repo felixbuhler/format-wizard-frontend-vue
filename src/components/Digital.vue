@@ -1,6 +1,5 @@
 <script setup>
-import PrintDin from './PrintDin.vue';
-import PrintOther from './PrintOther.vue';
+import PrintOther from './Instagram.vue';
 
 </script>
 
@@ -12,7 +11,7 @@ import PrintOther from './PrintOther.vue';
         </div>
 
 
-        <PrintDin />
+        <Instagram />
         <PrintOther />
 
     </section>

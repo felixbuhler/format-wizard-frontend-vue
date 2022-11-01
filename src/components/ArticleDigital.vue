@@ -41,7 +41,9 @@
                 <!-- Example Projects -->
                 <div class='info' v-if="entryExampleProjects">
                     <h6>Example Projects</h6>
-                    <p><SanityBlocks :blocks=entryExampleProjects /></p>
+                    <p>
+                        <SanityBlocks :blocks=entryExampleProjects />
+                    </p>
                 </div>
 
                 <!-- Aspect Ratio  -->
@@ -174,27 +176,27 @@ export default {
 .paper {
     --entryWidth: v-bind(entryWidth);
     --entryHeight: v-bind(entryHeight);
-    width: calc(var(--unit) * var(--entryWidth));
-    height: calc(var(--unit) * var(--entryHeight));
+    width: calc(var(--unit) * 0.5 * var(--entryWidth));
+    height: calc(var(--unit) * 0.5* var(--entryHeight));
 }
 
 .safe-space-top {
     --safezonetop: v-bind(entrySafeZoneTop);
-    top: calc(var(--unit) * var(--safezonetop));
+    top: calc(var(--unit) * 0.5* var(--safezonetop));
 }
 
 .safe-space-bottom {
     --safezonebottom: v-bind(entrySafeZoneBottom);
-    bottom: calc(var(--unit) * var(--safezonebottom));
+    bottom: calc(var(--unit) * 0.5* var(--safezonebottom));
 }
 
 .safe-space-left {
     --safezoneleft: v-bind(entrySafeZoneLeft);
-    left: calc(var(--unit) * var(--safezoneleft));
+    left: calc(var(--unit) * 0.5* var(--safezoneleft));
 }
 
 .safe-space-right {
     --safezoneright: v-bind(entrySafeZoneRight);
-    right: calc(var(--unit) * var(--safezoneright));
+    right: calc(var(--unit) * 0.5* var(--safezoneright));
 }
 </style>

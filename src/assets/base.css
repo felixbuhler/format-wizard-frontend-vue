@@ -24,7 +24,10 @@
   --color-darkgrey: rgb(52, 52, 52);
   --color-black: rgb(15, 15, 15);
   --color-beige: rgb(210, 210, 210);
-  --color-purple: rgb(153, 0, 255);
+  --color-purple: rgb(211, 144, 255);
+
+  --color-digital: var(--color-green);
+  --color-print: var(--color-blue);
 
   --padding: 10px;
   --padding-entry: 30px;

@@ -42,9 +42,7 @@ export default {
 
 </script>
 <template>
-    <section>
-        <div id=post.heightMm v-for="post in posts" :key="post._id">
-            <IndexArticle :entryName="post.name" :entryWidth="post.widthMm" :entryHeight="post.heightMm"
+            <IndexArticle v-for="post in posts" :key="post._id" :entryName="post.name" :entryWidth="post.widthMm" :entryHeight="post.heightMm"
                 :entryWidthPixel="post.widthPx" :entryHeightPixel="post.heightPx" :entryUseCases="post.useCases"
                 :entryExampleProjects="post.exampleProjects" :entryAspectRatio="post.aspectRatio"
                 :entryMinSizePixel="post.minSizePixel" :entryRecSizePixel="post.recSizePixel"
@@ -54,9 +52,6 @@ export default {
                 :entrySafeZone="post.safeZone" :entrySafeZoneTop="post.safeZoneTop"
                 :entrySafeZoneBottom="post.safeZoneBottom" :entrySafeZoneLeft="post.safeZoneLeft"
                 :entrySafeZoneRight="post.safeZoneRight" :entryFurtherInformation="post.furtherInformation" />
-
-        </div>
-    </section>
 </template>
 
 

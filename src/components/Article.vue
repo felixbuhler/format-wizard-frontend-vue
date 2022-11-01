@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class='column text'>
-            <div class='text-column'>
+            <div class='text-column paper-image'>
                 <div class='paper'>
                     <div v-if="entrySafeZoneTop" class="safe-space safe-space-top"></div>
                     <div v-if="entrySafeZoneBottom" class="safe-space safe-space-bottom"></div>
@@ -41,7 +41,7 @@
                 <!-- Example Projects -->
                 <div class='info' v-if="entryExampleProjects">
                     <h6>Example Projects</h6>
-                    <p>{{ entryExampleProjects }}</p>
+                    <p><SanityBlocks :blocks=entryExampleProjects /></p>
                 </div>
 
                 <!-- Aspect Ratio  -->
@@ -87,7 +87,9 @@
                 <!-- Video Codec  -->
                 <div class='info' v-if="entryVideoCodec">
                     <h6>Video Codec</h6>
-                    <p>{{ entryVideoCodec }}</p>
+                    <p>
+                        <SanityBlocks :blocks=entryVideoCodec />
+                    </p>
                 </div>
 
                 <!-- Audio Codec  -->
@@ -118,7 +120,9 @@
                 <!-- Further Information  -->
                 <div class='info' v-if="entryFurtherInformation">
                     <h6>Further Information</h6>
-                    <p>{{ entryFurtherInformation }}</p>
+                    <p>
+                        <SanityBlocks :blocks=entryFurtherInformation />
+                    </p>
                 </div>
 
             </div>
@@ -132,7 +136,7 @@
 
 <script>
 
-
+import { SanityBlocks } from 'sanity-blocks-vue-component';
 
 export default {
 
@@ -153,7 +157,15 @@ export default {
         'entryAudioCodec',
         'entryColorSpace',
         'entrySafeZone', 'entrySafeZoneTop', 'entrySafeZoneBottom', 'entrySafeZoneLeft', 'entrySafeZoneRight', 'entryFurtherInformation'
-    ]
+    ],
+    components: { SanityBlocks },
+    setup() {
+        const blocks = ['entryVideoCodec',
+            'entryAudioCodec', 'entryFurtherInformation', 'entryExampleProjects'];
+        const serializers = {
+        };
+        return { blocks, serializers };
+    }
 }
 </script>
      

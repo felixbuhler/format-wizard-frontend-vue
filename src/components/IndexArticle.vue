@@ -1,7 +1,7 @@
 
 
 <template>
-   <a :href="'#' + entryName.replace(/\s+/g, '-').toLowerCase()">{{ entryName }}</a>
+   <a :href="'#' + entryName.replace(/\s+/g, '-').toLowerCase()" class="index-link">{{ entryName }}</a>
 </template>
 
 <script>

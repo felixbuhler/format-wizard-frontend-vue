@@ -1,7 +1,11 @@
 <script setup>
+import IndexBehance from './IndexBehance.vue';
+import IndexFacebook from './IndexFacebook.vue';
 import IndexInstagram from './IndexInstagram.vue';
+import IndexLinkedin from './IndexLinkedin.vue';
 import IndexPrintDin from './IndexPrintDin.vue';
 import IndexPrintOther from './IndexPrintOther.vue';
+import IndexTiktok from './IndexTiktok.vue';
 </script>
 <template>
 
@@ -23,10 +27,20 @@ import IndexPrintOther from './IndexPrintOther.vue';
             <IndexInstagram />
         </section>
         <section>
-            <h4>TikTok</h4>
+            <h4><a href="#facebook">Facebook</a></h4>
+            <IndexFacebook />
         </section>
         <section>
-            <h4>Facebook</h4>
+            <h4><a href="#tiktok">TikTok</a></h4>
+            <IndexTiktok />
+        </section>
+        <section>
+            <h4><a href="#behance">Behance</a></h4>
+            <IndexBehance />
+        </section>
+        <section>
+            <h4><a href="#linkedin">LinkedIn</a></h4>
+            <IndexLinkedin />
         </section>
     </section>
 </template>

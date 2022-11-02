@@ -56,7 +56,8 @@ export default {
         </div>
 
 
-        <article class="entry" :id="post.name.replace(/\s+/g, '-').toLowerCase()" v-for="post in posts" :key="post._id">
+        <article class="entry" :id="post.name.replace(/\s+/g, '-').toLowerCase() + '-' + post._id"
+            v-for="post in posts" :key="post._id">
             <Article :entryName="post.name" :entryWidth="post.widthMm" :entryHeight="post.heightMm"
                 :entryWidthPixel="post.widthPx" :entryHeightPixel="post.heightPx" :entryUseCases="post.useCases"
                 :entryExampleProjects="post.exampleProjects" :entryAspectRatio="post.aspectRatio"

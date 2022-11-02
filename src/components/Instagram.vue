@@ -53,13 +53,15 @@ export default {
             sizes. ISO paper sizes are all based on a single aspect ratio of the square root of 2, or approximately
             1:1.41421. There are different series, as well as several extensions.
             <div class="source">
-                <a href="https://de.wikipedia.org/wiki/Papierformat#Internationale_Papierformate_(ISO/DIN)">Paper Size › International paper sizes</a> on
+                <a href="https://de.wikipedia.org/wiki/Papierformat#Internationale_Papierformate_(ISO/DIN)">Paper Size ›
+                    International paper sizes</a> on
                 Wikipedia.
             </div>
         </div>
 
 
-        <article class="entry" :id="post.name.replace(/\s+/g, '-').toLowerCase()" v-for="post in posts" :key="post._id">
+        <article class="entry" :id="post.name.replace(/\s+/g, '-').toLowerCase() + '-' + post._id"
+            v-for="post in posts" :key="post._id">
             <Article :entryName="post.name" :entryWidth="post.widthMm" :entryHeight="post.heightMm"
                 :entryWidthPixel="post.widthPx" :entryHeightPixel="post.heightPx" :entryUseCases="post.useCases"
                 :entryExampleProjects="post.exampleProjects" :entryAspectRatio="post.aspectRatio"

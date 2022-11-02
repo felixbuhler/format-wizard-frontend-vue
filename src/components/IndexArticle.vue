@@ -1,12 +1,13 @@
 
 
 <template>
-   <a :href="'#' + entryName.replace(/\s+/g, '-').toLowerCase()" class="index-link">{{ entryName }}</a>
+    <a :href="'#' + entryName.replace(/\s+/g, '-').toLowerCase() + '-' + keyAnchor" class="index-link">{{ entryName }}</a>
 </template>
 
 <script>
 export default {
     props: [
+        'keyAnchor',
         'entryName',
         'entryWidth', 'entryHeight',
         'entryWidthPixel', 'entryHeightPixel',

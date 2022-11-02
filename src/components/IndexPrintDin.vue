@@ -42,7 +42,7 @@ export default {
 
 </script>
 <template>
-            <IndexArticle v-for="post in posts" :key="post._id" :entryName="post.name" :entryWidth="post.widthMm" :entryHeight="post.heightMm"
+            <IndexArticle v-for="post in posts" :key="post._id" :keyAnchor="post._id" :entryName="post.name" :entryWidth="post.widthMm" :entryHeight="post.heightMm"
                 :entryWidthPixel="post.widthPx" :entryHeightPixel="post.heightPx" :entryUseCases="post.useCases"
                 :entryExampleProjects="post.exampleProjects" :entryAspectRatio="post.aspectRatio"
                 :entryMinSizePixel="post.minSizePixel" :entryRecSizePixel="post.recSizePixel"

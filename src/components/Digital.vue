@@ -1,5 +1,9 @@
 <script setup>
-import PrintOther from './Instagram.vue';
+import Behance from './Behance.vue';
+import Instagram from './Instagram.vue';
+import Facebook from './Facebook.vue';
+import TikTok from './Tiktok.vue';
+import LinkedIn from './Linkedin.vue';
 
 </script>
 
@@ -12,7 +16,10 @@ import PrintOther from './Instagram.vue';
 
 
         <Instagram />
-        <PrintOther />
+        <Facebook />
+        <TikTok />
+        <Behance />
+        <LinkedIn />
 
     </section>
 </template>

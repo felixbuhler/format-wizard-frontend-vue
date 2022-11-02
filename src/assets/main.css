@@ -545,8 +545,15 @@ section>section {
 
 /* Customs */
 
-#profile-picture .paper {
+#profile-picture-0b4c84a8-29b3-42eb-8157-fcfcf5177b3f .paper {
   border-radius: 100%;
+}
+
+#project-images-6ecee5c9-4810-4ac8-af84-feb1e27188ec .paper {
+  height: 30px !important;
+  border-bottom: none;
+  border-left-style: dashed;
+  border-right-style: dashed;
 }
 
 /* Footer */

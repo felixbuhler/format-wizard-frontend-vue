@@ -1,7 +1,11 @@
 
 
-<template> 
-    <div class="error">Found an error?</div>
+<template>
+    <div class="error">
+        <a href="">
+            <div>Found an error?</div>
+        </a>
+    </div>
 </template>
 
 <script>

@@ -49,6 +49,7 @@ export default {
         </div>
 
         <div class="section-intro-text">
+            <h2>Instagram</h2>
             The international paper size standard is ISO 216. It is based on the German DIN 476 standard for paper
             sizes. ISO paper sizes are all based on a single aspect ratio of the square root of 2, or approximately
             1:1.41421. There are different series, as well as several extensions.

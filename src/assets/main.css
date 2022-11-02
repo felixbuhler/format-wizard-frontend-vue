@@ -26,6 +26,8 @@ h5 {
   font-size: 3em;
 }
 
+a {cursor: pointer !important;}
+
 .bd {
   font-family: var(--font-accent);
   line-height: 0.5em;
@@ -38,6 +40,7 @@ h5 {
   padding: var(--padding);
   display: block;
   z-index: 99;
+  overflow: visible
 }
 
 section>.bubblewrap,
@@ -64,7 +67,6 @@ section>section .column.headline>.bubblewrap {
   padding-top: 0px;
   top: 45px !important;
   white-space: nowrap;
-  overflow-x: hidden !important;
 }
 
 section>section .column.headline>.bubblewrap:after {
@@ -104,7 +106,7 @@ formatwizard>section {
   background: white;
   font-family: sofia-pro-soft, sans-serif;
   box-shadow: 0px 0px 5px 0px var(--color-beige);
-  overflow: auto;
+  overflow: visible;
 }
 
 .squared {
@@ -217,6 +219,7 @@ section>section {
 }
 
 .index .bubble {
+  pointer-events: none;
   box-shadow: none;
   width: 100%;
   height: auto;
@@ -236,6 +239,7 @@ section>section {
 
 .index.open .bubble {
   transform: scale(1) translateY(0vh);
+  pointer-events: all;
 }
 
 .index .bubble h2 {
@@ -329,8 +333,6 @@ section>section {
 }
 
 .intro-text {
-  font-size: 3em;
-  line-height: 1.3em;
   width: 30vw;
   padding: var(--padding);
   font-weight: 400;
@@ -338,6 +340,24 @@ section>section {
   position: sticky;
   top: 50px;
   color: white;
+}
+
+
+
+.text-l {
+  font-size: 3em;
+  line-height: 1.3em;
+}
+
+.intro-text .text-l {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.intro-text a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
 }
 
 /* Entry */
@@ -362,15 +382,38 @@ section>section {
   font-family: nimbus-sans, sans-serif;
 }
 
+.section-intro-text h2 {
+  margin-bottom: 50px;
+  line-height: 1em;
+  font-size: 3em;
+  font-family: var(--font-rounded);
+  display: block;
+}
+
+.section-intro-text h2:before {
+  content: "Section ";
+  text-transform: uppercase;
+  font-size: var(--font-size-base);
+  display: inline-block;
+  position: absolute;
+  margin-top: -35px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  line-height: 1rem;
+  border: 1px solid currentColor;
+}
+
 .source {
   font-size: 0.75rem;
   display: block;
-  text-align: right;
+  color: rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+
 }
 
 .source a {
   color: inherit;
-  border-bottom: 1px solid var(--color-black);
+  border-bottom: 1px solid currentColor;
   text-decoration: none;
 }
 
@@ -536,11 +579,34 @@ section>section {
   width: var(--size);
   height: var(--size);
   position: fixed;
-  bottom: var(--padding);
-  right: var(--padding);
+  bottom: calc(2*var(--padding));
+  right: calc(2*var(--padding));
   background: var(--color-green);
   border-radius: 100%;
   z-index: 999;
+  display: table;
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.error:hover {
+  transform: scale(1.1) rotate(0);
+}
+
+.error a {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-family: var(--font-rounded);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1em;
+  color: inherit;
+  text-decoration: none;
 }
 
 /* Customs */
@@ -561,6 +627,7 @@ section>section {
 footer {
   color: white;
   text-align: center;
+  padding: 100px var(--padding)
 }
 
 footer a {
@@ -611,9 +678,11 @@ footer a {
   }
 
   .entry {
-    padding: var(--padding);
+    padding: var(--padding); margin-top: 0px;
+    padding-top: 0px;
   }
 
+ 
   .section-intro-text {
     width: 100vw;
     margin-left: 0;
@@ -621,8 +690,6 @@ footer a {
   }
 
   .intro-text {
-    font-size: 3em;
-    line-height: 1.1em;
     width: 100%;
     padding: var(--padding);
     font-weight: 400;
@@ -632,6 +699,11 @@ footer a {
     color: white;
   }
 
+  .text-l {
+    font-size: 3em;
+    line-height: 1.1em;
+  }
+
   .column {
     padding: 0;
   }
@@ -639,7 +711,7 @@ footer a {
   .column.text {
     background: rgba(255, 255, 255, 1);
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 100%;
     gap: 20px;
     z-index: 9;
     position: relative;

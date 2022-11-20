@@ -50,17 +50,23 @@ export default {
 
         <div class="section-intro-text">
             <h2>Behance</h2>
-            The international paper size standard is ISO 216. It is based on the German DIN 476 standard for paper
-            sizes. ISO paper sizes are all based on a single aspect ratio of the square root of 2, or approximately
-            1:1.41421. There are different series, as well as several extensions.
+            Behance (Bēhance) is a product of Adobe Inc. The online platform serves the presentation and discovery of
+            creative works and was founded in September 2006 by Matias Corea and Scott Belsky. It is based in New York
+            City, USA.
+            People join Behance and create profiles consisting of projects. A project is a group of images, videos, and
+            other digital content about a topic or process. It is similar to a portfolio. Each project has a unique URL
+            that can be shared. For each project, it shows how many people have visited and »liked« the project.
+            The other participants of Behance can follow a profile. When you follow someone, you are notified in case of
+            an update.
             <div class="source">
-                <a href="https://de.wikipedia.org/wiki/Papierformat#Internationale_Papierformate_(ISO/DIN)">Paper Size › International paper sizes</a> on
+                <a href="https://de.wikipedia.org/wiki/Behance">Bēhance</a> on
                 Wikipedia.
             </div>
         </div>
 
 
-        <article class="entry" :id="post.name.replace(/\s+/g, '-').toLowerCase()  + '-' + post._id" v-for="post in posts" :key="post._id">
+        <article class="entry" :id="post.name.replace(/\s+/g, '-').toLowerCase() + '-' + post._id"
+            v-for="post in posts" :key="post._id">
             <Article :entryName="post.name" :entryWidth="post.widthMm" :entryHeight="post.heightMm"
                 :entryWidthPixel="post.widthPx" :entryHeightPixel="post.heightPx" :entryUseCases="post.useCases"
                 :entryExampleProjects="post.exampleProjects" :entryAspectRatio="post.aspectRatio"

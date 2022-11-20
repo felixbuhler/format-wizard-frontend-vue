@@ -26,7 +26,9 @@ h5 {
   font-size: 3em;
 }
 
-a {cursor: pointer !important;}
+a {
+  cursor: pointer !important;
+}
 
 .bd {
   font-family: var(--font-accent);
@@ -66,7 +68,7 @@ section>section .column.headline>.bubblewrap {
   left: 20vw;
   padding-top: 0px;
   top: 45px !important;
-  white-space: nowrap;
+
 }
 
 section>section .column.headline>.bubblewrap:after {
@@ -81,6 +83,12 @@ section>section .column.headline>.bubblewrap:after {
   background: rgb(255, 255, 255);
   background: linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 75%);
   display: block;
+}
+
+section>section .column.headline>.bubblewrap .bubble {
+  line-height: 1.2em;
+  padding: 5px 10px;
+  height: auto;
 }
 
 formatwizard>section {
@@ -327,7 +335,10 @@ section>section {
   top: 0px;
   min-height: 100vh;
   margin-bottom: -50px;
-  background: var(--color-black);
+  background: url(1977.37.3_web.jpg), black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 
   border-radius: 0;
 }
@@ -678,15 +689,24 @@ footer a {
   }
 
   .entry {
-    padding: var(--padding); margin-top: 0px;
+    padding: var(--padding);
+    margin-top: 0px;
     padding-top: 0px;
   }
 
- 
+
   .section-intro-text {
     width: 100vw;
     margin-left: 0;
     padding: 0px var(--padding);
+  }
+
+  .section-intro-text h2 {
+    margin-bottom: 50px;
+    line-height: 1em;
+    font-size: 2em;
+    font-family: var(--font-rounded);
+    display: block;
   }
 
   .intro-text {

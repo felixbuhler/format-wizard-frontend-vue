@@ -50,19 +50,19 @@ export default {
 
         <div class="section-intro-text">
             <h2>Instagram</h2>
-            The international paper size standard is ISO 216. It is based on the German DIN 476 standard for paper
-            sizes. ISO paper sizes are all based on a single aspect ratio of the square root of 2, or approximately
-            1:1.41421. There are different series, as well as several extensions.
+            Instagram is a social network with a focus on video and photo sharing, operated by the company Meta
+            Platforms. The core of the offering is a mixture of microblog and audiovisual platform. Users can edit their
+            photos and videos and add filters. The network is financed by advertising. Most of the content is not
+            available without an account.
             <div class="source">
-                <a href="https://de.wikipedia.org/wiki/Papierformat#Internationale_Papierformate_(ISO/DIN)">Paper Size ›
-                    International paper sizes</a> on
+                <a href="https://de.wikipedia.org/wiki/Instagram">Instagram</a> on
                 Wikipedia.
             </div>
         </div>
 
 
-        <article class="entry" :id="post.name.replace(/\s+/g, '-').toLowerCase() + '-' + post._id"
-            v-for="post in posts" :key="post._id">
+        <article class="entry" :id="post.name.replace(/\s+/g, '-').toLowerCase() + '-' + post._id" v-for="post in posts"
+            :key="post._id">
             <Article :entryName="post.name" :entryWidth="post.widthMm" :entryHeight="post.heightMm"
                 :entryWidthPixel="post.widthPx" :entryHeightPixel="post.heightPx" :entryUseCases="post.useCases"
                 :entryExampleProjects="post.exampleProjects" :entryAspectRatio="post.aspectRatio"

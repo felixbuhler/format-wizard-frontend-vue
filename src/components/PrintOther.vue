@@ -50,10 +50,6 @@ export default {
 
         <div class="section-intro-text">
             <h2>Other</h2>
-            Die Deutsche Norm, die auf Walter Porstmann zurückgeht, diente mit ihren Festlegungen über die A‐ und
-            B‐Reihe[13] als Grundlage für das europäische und internationale Äquivalent EN ISO 216, das wiederum in fast
-            allen Ländern adaptiert worden ist. Unterschiede gibt es meist nur in den erlaubten Toleranzen. Als rein
-            nationale Norm ist DIN 476-2:2008-02 Papier-Endformate – C‐Reihe noch gültig.
         </div>
 
 

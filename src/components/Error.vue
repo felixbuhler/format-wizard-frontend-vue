@@ -2,7 +2,7 @@
 
 <template>
     <div class="error">
-        <a href="">
+        <a href="https://www.instagram.com/felixbuhler/" target="_blank">
             <div>Found an error?</div>
         </a>
     </div>

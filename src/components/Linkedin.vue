@@ -50,19 +50,20 @@ export default {
 
         <div class="section-intro-text">
             <h2>LinkedIn</h2>
-            The international paper size standard is ISO 216. It is based on the German DIN 476 standard for paper
-            sizes. ISO paper sizes are all based on a single aspect ratio of the square root of 2, or approximately
-            1:1.41421. There are different series, as well as several extensions.
+            LinkedIn (pronunciation: [ˌliŋkt.ˈɪn]), based in Sunnyvale, California, USA, is a social network for
+            maintaining existing business contacts and making new business connections. LinkedIn is available in 24
+            languages and has over 830 million users in 200 countries and regions. The U.S. leads with over 188 million
+            users, followed by Europe with 138 million members, India with 88 million, and the People's Republic of
+            China with 56 million. The company has been part of the Microsoft Group since December 8, 2016.
             <div class="source">
-                <a href="https://de.wikipedia.org/wiki/Papierformat#Internationale_Papierformate_(ISO/DIN)">Paper Size ›
-                    International paper sizes</a> on
+                <a href="https://de.wikipedia.org/wiki/LinkedIn">LinkedIn</a> on
                 Wikipedia.
             </div>
         </div>
 
 
-        <article class="entry" :id="post.name.replace(/\s+/g, '-').toLowerCase() + '-' + post._id"
-            v-for="post in posts" :key="post._id">
+        <article class="entry" :id="post.name.replace(/\s+/g, '-').toLowerCase() + '-' + post._id" v-for="post in posts"
+            :key="post._id">
             <Article :entryName="post.name" :entryWidth="post.widthMm" :entryHeight="post.heightMm"
                 :entryWidthPixel="post.widthPx" :entryHeightPixel="post.heightPx" :entryUseCases="post.useCases"
                 :entryExampleProjects="post.exampleProjects" :entryAspectRatio="post.aspectRatio"

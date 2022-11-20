@@ -50,17 +50,23 @@ export default {
 
         <div class="section-intro-text">
             <h2>Facebook</h2>
-            The international paper size standard is ISO 216. It is based on the German DIN 476 standard for paper
-            sizes. ISO paper sizes are all based on a single aspect ratio of the square root of 2, or approximately
-            1:1.41421. There are different series, as well as several extensions.
+            Facebook (proper spelling: facebook) is a social network operated by the U.S. company Meta Platforms. In
+            2019, its revenue was $70.7 billion.
+
+            Facebook allows the creation of private profiles to showcase oneself, pages for business or artistic
+            presence, and groups to discuss common interests. Profiles can be interconnected through friend requests or
+            subscriptions, with an unlimited number of subscribers (analogous to followers on Twitter), but a maximum
+            limit of 5000 directly connected friends. In addition, Facebook offers a messenger as well as a development
+            platform for creating application software. Facebook also offers a social networking service.
             <div class="source">
-                <a href="https://de.wikipedia.org/wiki/Papierformat#Internationale_Papierformate_(ISO/DIN)">Paper Size › International paper sizes</a> on
+                <a href="https://de.wikipedia.org/wiki/Facebook">Facebook</a> on
                 Wikipedia.
             </div>
         </div>
 
 
-        <article class="entry" :id="post.name.replace(/\s+/g, '-').toLowerCase()  + '-' + post._id" v-for="post in posts" :key="post._id">
+        <article class="entry" :id="post.name.replace(/\s+/g, '-').toLowerCase() + '-' + post._id"
+            v-for="post in posts" :key="post._id">
             <Article :entryName="post.name" :entryWidth="post.widthMm" :entryHeight="post.heightMm"
                 :entryWidthPixel="post.widthPx" :entryHeightPixel="post.heightPx" :entryUseCases="post.useCases"
                 :entryExampleProjects="post.exampleProjects" :entryAspectRatio="post.aspectRatio"

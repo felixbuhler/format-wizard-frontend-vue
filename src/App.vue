@@ -11,5 +11,5 @@ import Error from "./components/Error.vue";
   <Intro />
   <TheContent />
   <Footer />
-  <Error />
+
 </template>
